@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+}
+a
+{
+	text-decoration: none;
+}
+table, th, td {
+	border: 1px solid black;
+	text-align: center;
+    margin: auto;
+}
+.tabla_horarios {
+	width: 100%;
+	min-height: 5vh;
+	border: 1px solid black;
+	text-align: center;
+    font-size: 1rem;
+}
+.tabla_horarios th
+{
+}
+.tabla_horarios td
+{
+}
+.container-tabla_temp
+{
+}
+#navbar a {
+	text-align: center;
+	padding: 14px 16px;
+	display: block;
+	float: left;
+	color: #fff;
+    font-size: 0.8rem;
+}
+#navbar{
+	position: sticky;
+	overflow: hidden;
+	top: 0;
+	width: 100%;
+	background-color: #333;
+}
+.tabla-temp {
+	top: 60px;
+	width: 80%;
+    margin: auto;
+}
+
+.tabla-temp td:hover:nth-child(3){ 
+	background-color: dodgerblue;
+}
+
+.tabla-temp td:nth-child(3) {
+	text-align: left;
+}
+.row-hora{
+	color: red;
+}
+
+.row-bdd{
+	background-color: #f4e0ef;
+}
+.row-bdd:hover{
+	background-color: #f43a97;
+}
+
+.row-ciber{
+	
+}
+
+.row-ciber:hover{
+	background-color: #f97141;
+}
+
+.row-42:hover{
+	background-color:#04809f;
+	color: #ffffff;
+}
+
+.row-sistemas{
+	background-color:#e9e9eb;
+}
+.row-sistemas:hover{
+	background-color: #d1d2d4;
+}
+.row-mul{
+	background-color: #cae7be;
+}
+.row-mul:hover{
+	background-color: #749565;
+}
+.row-entornos{
+	background-color: #e5dbf6;
+}
+.row-programa{
+	background-color: #d3e2f7;
+}
+.row-programa:hover{
+	background-color: #2fbaee;
+}
