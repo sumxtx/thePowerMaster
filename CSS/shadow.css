@@ -1,0 +1,120 @@
+@keyframes cambiarColor
+{
+  0%
+  {
+    background-color: red;
+    transform: rotate(0deg);
+    margin-left: 0px;
+    opacity: 0;
+  }
+  50%
+  {
+    background-color: blue;
+    transform: rotate(180deg);
+    margin-left: 25%;
+    opacity: 0.5;
+  }
+  100%
+  {
+    background-color: green;
+    transform: rotate(360deg);
+    margin-left: 50%;
+    opacity: 1;
+    
+  }
+}
+
+@keyframes rotar
+{
+  from
+  {
+    transform: rotate(0deg);
+  }
+  to
+  {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes desplazar {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 500px;
+  }
+}
+
+@keyframes aparecer
+{
+  from
+  {
+    opacity: 0;
+  }
+  to
+  {
+    opacity: 1;
+  }
+}
+
+.shadow-example
+{
+    box-shadow: 10px 10px 5px black;
+    width: 500px;
+    margin: auto;
+    height: 100%;
+ }
+
+.shadow-example
+{
+  animation: cambiarColor 10s /*infinite*/;
+  /*
+   "animation-duration": la duración de la animación en segundos o milisegundos.
+
+    "animation-delay": el retraso antes de que comience la animación en segundos o milisegundos.
+
+    "animation-iteration-count": la cantidad de veces que se repite la animación. Puede ser un número o "infinite" para repetir la animación indefinidamente.
+
+    "animation-timing-function": la función de tiempo que se utiliza para controlar la velocidad de la animación.
+  */
+}
+
+/*rotate*/
+/*
+.shadow-example
+{
+  animation: rotar 10s infinite;
+}
+*/
+
+/*desplazamiento*/
+/*
+.shadow-example
+{
+  animation: desplazar 10s infinite;
+}
+*/
+
+/*aparecer*/
+/*
+.shadow-example
+{
+  animation: aparecer 2s;
+}
+
+*/
+/*drop-shadow*/
+/*
+img {
+  width: 200px;
+}
+
+#box {
+  box-shadow: 10px 10px 10px black;
+}
+
+#drop {
+  filter: drop-shadow(10px 10px 10px black);
+}
+*/
+
