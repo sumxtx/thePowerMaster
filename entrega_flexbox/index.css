@@ -1,0 +1,386 @@
+/* Fonts definitions ---------------------------------------------------------*/
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('assets/Fonts/JetBrains_Mono/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('assets/Fonts/JetBrains_Mono/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('assets/Fonts/JetBrains_Mono/JetBrainsMono-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('assets/Fonts/JetBrains_Mono/JetBrainsMono-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+/* ---------------------------------------------------------------------------*/
+/* General Stylings  ---------------------------------------------------------*/
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root
+{
+  /* Tokyo Night Inspired Color Pallete */
+  --darkbg0: #1f2335; 
+  --darkbg1: #24283b; /* darkbg variant 1 */
+  --darkbg2: #292e42; /* dakbg variant 2 */
+
+  --lightbg0: #c0caf5;
+
+  --darkfg0: #737aa2; /*foreground1 (Headers) when dark */
+  --darkfg1: #a9b1d6; /*foreground2 (Text) when dark */
+  --darkfg2: #565f89; /* aside text when dark */
+
+  --lightfg0: #414868; /*foreground1 (Headers) when light*/
+  --lightfg1: #3b4261; /* aside text when light */ 
+  --lightfg2: #545c7e; /*foreground2 (Text) when light */
+
+  --light-blue: #3d59a1;
+  --dark-blue: #394b70;
+  --light-cyan: #7dcfff;
+  --dark-cyan: #7aa2f7;
+  --light-green: #b4f9f8;
+  --dark-green: #c3e88d;   /* Ok */
+  --light-purple: #bb9af7;
+  --dark-purple: #9d7cd8;
+  --dark-orange: #ff9e64;
+  --light-orange: #ffc777; /* Warnings */
+  --light-tean: #4fd6be;
+  --dark-tean: #41a6b5;
+  --light-red: #ff757f;
+  --dark-red: #c53b53; /* Alerts */
+  --red-neon: #ff007c;
+}
+body
+{
+  background-color: var(--darkbg1);
+  background-image: url(assets/asfalt-dark.png);
+  /* to do with DOM later
+  background-color: var(--lightbg0);
+  background-image: url(assets/asfalt-light.png);
+   */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+}
+a
+{
+  color: var(--darkfg2);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* ---------------------------------------------------------------------------*/
+/* Header Stylings------------------------------------------------------------*/
+header
+{
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  min-height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  /* to do with DOM later
+  color: var(--lightfg0);
+   */
+  padding: 0.1em;
+  color: var(--darkfg0);
+  font-weight: bold;
+  border: var(--darkbg0) 2px solid;
+  border-radius: 0.8em;
+  background-color: var(--darkbg0);
+  background-image: url(assets/asfalt-dark.png);
+}
+header > img
+{
+  width: 4em;
+  height: 4em;
+  padding: 0.2em;
+  border-radius: 1.2em;
+  flex-shrink: 1;
+}
+header > h1
+{
+  align-self: center;
+  padding: 0.2em;
+  flex-shrink: 1;
+  gap: 1em;
+}
+header > h2
+{
+  align-self: flex-end;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.6em;
+  padding: 0.2em;
+}
+/* ---------------------------------------------------------------------------*/
+/* Menu Navigation -----------------------------------------------------------*/
+.nav-list
+{
+  display: flex;
+  width: 100vw;
+  justify-content: flex-start;
+  gap: 20px;
+  border: var(--darkbg2) 2px solid;
+  background-color: var(--darkbg0);
+  border-radius: 0.8em;
+  padding: 0.4em;
+  list-style: none;
+}
+.nav-list > li:hover
+{
+  background-color: var(--darkbg2);
+  border-radius: 0.8em;
+  padding: 0.8em;
+}
+/* ---------------------------------------------------------------------------*/
+/* Clients Navigation --------------------------------------------------------*/
+main
+{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+/*----------------------------------------------------------------------------*/
+.clients
+{
+  width: 10em;
+}
+.clients > h4
+{
+  border: var(--darkbg2) 2px solid;
+  border-radius: 0.8em;
+  padding: 0.8em;
+  background-color: var(--darkbg0);
+  color: var(--darkfg2);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.clients-list
+{
+  height: 42em;
+  overflow-y: scroll;
+  border: var(--darkbg2) 2px solid;
+  border-radius: 0.8em;
+  list-style: none;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.clients-list > li
+{
+  padding: 1em;
+  text-align: center;
+}
+.clients-list > li:hover
+{
+  border-radius: 0.8em;
+  padding: 0.8em;
+  background-color: var(--lightfg2);
+}
+.clients-list > li:hover > a
+{
+  color: var(--darkbg0);
+}
+
+/*----------------------------------------------------------------------------*/
+.client-devices
+{
+  flex-grow: 3;
+  border-radius: 0.8em;
+}
+.client-devices > h4
+{
+  border-radius: 0.8em;
+  background-color: var(--darkbg0);
+  color: var(--darkfg2);
+  border: var(--darkbg2) 2px solid;
+  padding: 0.8em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.client-devices-list
+{
+  /* height: 10em; Todo implement with grid */
+  height: 42em;
+  overflow-y: scroll;
+  border: var(--darkbg2) 2px solid;
+  border-radius: 0.8em;
+  list-style: none;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.client-devices-list > li
+{
+  padding: 1em;
+  text-align: center;
+  color: var(--red-warning);
+}
+.client-devices-list > li:nth-child(2)
+{
+  color: var(--red-warning);
+}
+.client-devices-list > li:hover
+{
+  border-radius: 0.8em;
+  padding: 0.8em;
+  background-color: var(--lightfg2);
+}
+.client-devices-list > li:hover > a
+{
+  color: var(--darkbg0);
+}
+/*----------------------------------------------------------------------------*/
+.client-device-info
+{
+  flex-grow: 8;
+  border-radius: 0.8em;
+}
+.client-device-info > h4
+{
+  border-radius: 0.8em;
+  border: var(--darkbg2) 2px solid;
+  padding: 0.8em;
+  background-color: var(--darkbg0);
+  color: var(--darkfg2);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.client-device-info-list
+{
+  /* height: 10em; Todo implement with grid */
+  height: 42em;
+  overflow-y: scroll;
+  border: var(--darkbg2) 2px solid;
+  border-radius: 0.8em;
+  list-style: none;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.client-device-info-list > li
+{
+  padding: 1em;
+  text-align: center;
+}
+.client-device-info-list > li:hover
+{
+  border-radius: 0 0 0.8em 0.8em;
+  padding: 0.8em;
+  background-color: var(--darkbg2);
+}
+/* ---------------------------------------------------------------------------*/
+/* Footer Stylings -----------------------------------------------------------*/
+footer
+{
+  position: static;
+  bottom: 0;
+  width: 100vw;
+  border: var(--darkbg2) 2px solid;
+  color: var(--darkfg2);
+}
+/* ---------------------------------------------------------------------------*/
+/* Burger Menu (Responsive) --------------------------------------------------*/
+.burger
+{
+  display: none;
+}
+.simulate-alert > a
+{
+  color: var(--light-red);
+}
+.simulate-ok > a
+{
+  color: var(--dark-green);
+}
+.simulate-warning > a
+{
+  color: var(--light-orange);
+}
+/* ---------------------------------------------------------------------------*/
+/* Media queries -------------------------------------------------------------*/
+@media (max-width: 524px)
+{
+  header
+  {
+    height: 6em;
+    flex-direction: column;
+  }
+  header > img
+  {
+    height: 3em;
+    width: 3em;
+    order: 1;
+  }
+  header > h1
+  {
+    order: 2;
+  }
+  header > h2
+  {
+    order: 3;
+  }
+  header > div
+  {
+    margin-right: 0;
+    margin-left: auto;
+    align-self: center;
+    order: 4;
+  }
+  nav
+  {
+    display:none;
+  }
+  .burger
+  {
+    display: block;
+    align-self: center;
+  }
+}
+@media (max-width: 740px)
+{
+  main
+  {
+    flex-direction: column;
+  }
+  .clients
+  {
+    min-width: 100vw;
+  }
+  .clients-list
+  {
+    max-height: 5em;
+    overflow-y: scroll;
+  }
+  .client-devices
+  {
+    min-width: 100vw;
+  }
+  .client-devices-list
+  {
+    max-height: 5em;
+    overflow-y: scroll;
+  }
+}
