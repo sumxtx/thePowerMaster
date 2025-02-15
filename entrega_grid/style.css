@@ -1,0 +1,140 @@
+/******************************************************************************/
+/*                                                #####################       */
+/*  Author: Lorem Ipsum Dolor Sum                 #####################       */
+/*  Email:  lorem@thepowereducation.com           #####(((((((((((((((((((((  */
+/*                                                #####(((((((((((((((((((((  */
+/*                                                #####((((############  (((  */
+/*                                                #####((((############  (((  */
+/*                                                #####((((############       */
+/*                                                #####((((############       */
+/*                                                 ####((((###########        */
+/*  File:       style.css                            ##((((#########          */
+/*  Created at: 15/02/2025 19:30:05                    #((((######            */
+/*  Updated at: 15/02/2025 19:30:05                      ((((                 */
+/*                                                         ((((((((           */
+/*                                                           (((((            */
+/******************************************************************************/
+:root {
+  --primary-color: rgb(236, 236, 236);
+  --secondary-color: rgb(21, 21, 21);
+  --blue-color: #2bc5cd;
+  --orange-color: #ff693d;
+  --border: 2px solid var(--blue-color);
+  --spacing: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Resto del CSS */
+
+body
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  gap: var(--spacing);
+  background-color: lightgray;
+  height: 100vh;
+  width: 100vw;
+}
+header
+{
+  grid-row: 1 / 3;
+  grid-column: 1/ 2;
+  background-color: var(--blue-color);
+  color: var(--primary-color);
+  font-size: 0.7em;
+  padding: var(--spacing);
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  gap: 2em;
+}
+
+header > h1
+{
+  grid-row: 1 / 2;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header > p
+{
+  font-size: 1.2em;
+  text-align: justify;
+  grid-row: 7 / 8;
+  padding: 0.5em;
+}
+
+main
+{
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  border: 2px solid var(--blue-color);
+  background-color: var(--primary-color);
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  text-transform: uppercase;
+}
+main > h2
+{
+  color: var(--blue-color);
+  text-align: center;
+  grid-row: 2 /3;
+}
+.school {
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.student {
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+  grid-row: 1 / 2;
+  grid-column:  3 / 4;
+}
+
+.time {
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+
+.alumni {
+  background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+footer
+{
+  grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  background-color: var(--orange-color);
+  color: var(--primary-color);
+  padding: var(--spacing);
+  display: grid;
+  grid-template-rows: 3;
+  grid-template-columns: 6;
+}
+footer > h3
+{
+  grid-row: 1 / 2 ;
+}
+footer > p
+{
+  grid-row: 2 / 3;
+}
+footer > button
+{
+  text-transform: uppercase;
+  padding: var(--spacing);
+  grid-row: 3/4;
+  grid-column: 1/2;
+  border: none;
+
+}
+.alumni,
+.school,
+.student,
+.time {
+  background-size: cover;
+}
