@@ -14,7 +14,7 @@
 > CSS
 
 ### Entrega 4:
-[entrega_grid](https://github.com/sumxtx/thePowerMaster/tree/main/entrega_posicionamiento)
+[entrega_grid](https://github.com/sumxtx/thePowerMaster/tree/main/entrega_grid)
 > CSS
 ---
 
