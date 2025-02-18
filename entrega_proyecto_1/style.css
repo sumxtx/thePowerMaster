@@ -111,6 +111,28 @@ a {
 .burger{
   display: none;
 }
+
+@media screen and (max-width: 1415px)
+{
+  /*gallery start to shrink */
+}
+@media screen and (max-width: 1200px)
+{
+  /*mid-header realign*/
+}
+@media screen and (max-width: 1020px)
+{
+  /*hide mid-header show only burger and bag icons*/
+  /*search bar now is wide with placeholder "What are you looking for"*/
+  /*Gallery has now only 3 photos per row and no margin top*/
+}
+@media screen and (max-width: 767px)
+{
+  /*Gallery has now only 2 photos per row and margin top*/
+  /*Is the last shrink, mobile version is this one */
+}
+
+/*
 @media screen and (max-width: 1110px ) {
   .left-desp{
     display: none;
@@ -123,3 +145,4 @@ a {
   }
 
 }
+*/
