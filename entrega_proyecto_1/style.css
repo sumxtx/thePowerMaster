@@ -3,10 +3,10 @@
   padding: 0;
   list-style: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /*border: 1px rgba(255, 0, 0, 0.432) solid;*/
 }
 :root {
   --light-gray: #f1f1f1;
+  --text2: #6b6b6b;
 }
 header {
   width: 100vw;
@@ -25,73 +25,88 @@ a {
   text-decoration: none;
 }
 .mid-header {
+  width: 100vw;
+  height: 4.4em;
   display: flex;
-  height: 5em;
-  padding-left: 0 2em 0 2em;
-  flex-wrap: nowrap;
   flex-direction: row;
 }
 .left-desp {
-  background-color: #ffffff;
-  flex-basis: 25%;
-  align-items: baseline;
+  width: 33vw;
+  margin-left: 2vw; 
+  justify-content: flex-start;
   display: flex;
   flex-direction: row;
 }
 .left-desp > div {
   display: flex;
-  height: 100%;
-  align-items: baseline;
-  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .left-desp > div > a {
-  margin: 0 auto;
-  padding: 1em 2em 1em 2em;
-  /*border: rgba(255, 255, 0, 0.411) 3px solid;*/
+  font-weight: normal;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-transform: uppercase;
+  padding: 0 1em 0 1em;
+  height: 100%;
 }
 .left-desp > div:hover {
   background-color: var(--light-gray);
 }
 .mid-header-logo {
-  flex-basis: 50%;
+  width:30vw;
+  justify-content: center;
   display: flex;
 }
 .mid-header-logo > img {
-  width: 5em;
-  height: 100%;
-  margin: auto;
-  padding-right: 39px;
+  width: 4.4em;
+  height: 4.4em;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .right-desp {
-  background-color: #ffffff;
-  flex-basis: 25%;
-  align-items: center;
+  width: 33vw;
+  margin-right: 2vw;
+  justify-content: flex-end;
   display: flex;
   flex-direction: row;
 }
 .right-desp > div {
   display: flex;
-  height: 100%;
-  text-decoration: none;
-  text-transform: capitalize;
-  /*border: 1px rgba(0, 0, 255, 0.288) solid;*/
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: var(--text2);
 }
 .right-desp > div > a {
-  margin: 0 auto;
-  padding: 1em 1em 1em 1em;
+  font-weight: normal;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-transform: capitalize;
+  padding: 0 1.5em 0 1.5em;
+  height: 100%;
+  font-size: 0.9rem;
 }
 .right-desp > div:hover {
   background-color: var(--light-gray);
 }
 .sub-header {
-  height: 3.5em;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
   background-color: var(--light-gray);
 }
 .sub-header > h3{
+  font-size: 1.5em;
   text-align: center;
   font-weight: normal;
-  font-size: 19;
-  padding-top: 1em;
 }
 .burger{
   display: none;
