@@ -31,7 +31,7 @@ a {
   flex-direction: row;
 }
 .left-desp {
-  width: 33vw;
+  width:33vw;
   margin-left: 2vw; 
   justify-content: flex-start;
   display: flex;
@@ -49,8 +49,9 @@ a {
   align-items: center;
   align-content: center;
   text-transform: uppercase;
-  padding: 0 1em 0 1em;
+  padding: 0 1.5em 0 1.5em;
   height: 100%;
+  font-size: 0.92rem;
 }
 .left-desp > div:hover {
   background-color: var(--light-gray);
@@ -95,12 +96,13 @@ a {
   background-color: var(--light-gray);
 }
 .sub-header {
+  top:0;
+  position: sticky;
   height: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-
   background-color: var(--light-gray);
 }
 .sub-header > h3{
@@ -108,23 +110,122 @@ a {
   text-align: center;
   font-weight: normal;
 }
-.burger{
+main
+{
+}
+.gallery
+{
+  width:100vw;
+  margin: 2em auto 1em auto;
+  display:grid;
+  gap: 2em;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(3,600px);
+} 
+.gal-ele
+{
+  background-color: #b6b6b6;
+  display: flex;
+  flex-direction: column;
+}
+.gal-ele-img
+{
+  height: 75%;
+  background-color: lightcyan;
+}
+
+.mid-header > .burger{
+  display: none;
+}
+.mid-header > .bag-icon
+{
+  display: none;
+}
+.search-bar
+{
   display: none;
 }
 
 @media screen and (max-width: 1415px)
 {
   /*gallery start to shrink */
+  .gallery
+  {
+    margin: 2em auto;
+    grid-template-columns: repeat(4, 20%);
+    justify-content: center;
+    align-content: center;
+  }
 }
 @media screen and (max-width: 1200px)
 {
   /*mid-header realign*/
+  .right-desp > div > a {
+  padding: 0 1em 0 1em;
+  font-size: 0.9rem;
 }
-@media screen and (max-width: 1020px)
+.left-desp > div > a {
+  padding: 0 0.8em 0 0.8em;
+  font-size: 0.92rem; 
+}
+
+}
+@media screen and (max-width: 1024px)
 {
   /*hide mid-header show only burger and bag icons*/
+.mid-header > .burger{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  width: 32vw;
+  margin-left: 3vw;
+}
+.mid-header > .bag-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  width: 32vw;
+  margin-right: 3vw;
+}
+.mid-header > .mid-header-logo > img
+{
+  width: 3em;
+  height: 3em;
+}
+.left-desp{
+  display: none;
+}
+.right-desp{
+  display: none;
+}
+.search-bar
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 2em;
+  height: 3em;
+  border-bottom: black 1px solid;
+}
+.sub-header
+{
+  height: 4.5em;
+}
+
   /*search bar now is wide with placeholder "What are you looking for"*/
   /*Gallery has now only 3 photos per row and no margin top*/
+.gallery
+{
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 284px);
+  grid-template-rows: repeat(4, 533px);
+}
 }
 @media screen and (max-width: 767px)
 {
