@@ -6,6 +6,7 @@
 }
 :root {
   --light-gray: #f1f1f1;
+  --dark-gray: #747474;
   --text2: #6b6b6b;
 }
 header {
@@ -69,7 +70,7 @@ a {
   align-content: center;
 }
 .right-desp {
-width: 33vw;
+  width: 33vw;
   margin-right: 2vw;
   justify-content: flex-end;
   display: flex;
@@ -109,9 +110,6 @@ width: 33vw;
   font-size: 1.5em;
   text-align: center;
   font-weight: normal;
-}
-main
-{
 }
 .gallery
 {
@@ -175,9 +173,9 @@ main
   grid-area: btn;
   margin: auto 0 auto auto;
   display: flex;
-  background-color: #000000;
+  background-color: black;
   border-radius: 8px;
-  color: #ffffff;
+  color: white;
   height: 30%;
   width: 90%;
   justify-content: center;
@@ -186,8 +184,9 @@ main
   font-size: 1.1em;
   font-weight: bold;
 }
-.add-cart-btn:hover{ background-color: #747474;}
-
+.add-cart-btn:hover{
+  background-color: var(--dark-gray);
+}
 .mid-header > .burger{
   display: none;
 }
@@ -205,19 +204,17 @@ main
   width: 100vw;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-image: url("footer-bg.jpg");
+  background-image: url("assets/footer-bg.jpg");
   background-position: center;
-  opacity: 1;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-
 .shop-now > h5 
 {
-  z-index: 1000;
   text-transform: uppercase;
   color: white;
 }
@@ -230,25 +227,24 @@ main
 .shop-now > button 
 {
   border: none;
-  padding: 1.5em 2em;
+  padding: 1em 2em;
 }
 footer
 {
   background-color: var(--light-gray);
-  z-index: 1;
 }
 .main-footer
 {
   height: 250px;
   margin-left: 10vw;
   margin-right: 10vw;
+  font-size: 0.9em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas: "loyalty followus customservice legal mailing"
 }
 .main-footer > div
 {
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,42 +261,52 @@ footer
 .loyalty
 {
   grid-area: loyalty;
-  justify-content: flex-start;
 }
 .followus
 {
   grid-area: followus;
-  justify-content: flex-start;
 }
 .customservice
 {
   grid-area: customservice;
-  justify-content: flex-start;
 }
 .legal
 {
   grid-area: legal;
-  justify-content: flex-start;
 }
 .mailing
 {
   grid-area: mailing;
   justify-content: center;
 }
-.paymets
+.email-mailing-in
+{
+  border: none;
+  height: 1.5rem;
+  padding: 1em;
+}
+.paymets-div
 {
   display: flex;
+  width: 100vw;
   flex-direction: row;
-  justify-content: flex-start;
 }
-.payments > p
-{
-  width: 30em;
-}
-.payments > img
+.payments-div > img
 {
   width: 40px;
   height: 22px;
+  justify-content: flex-start;
+  align-items: left;
+  align-content: left;
+}
+.payment-title
+{
+  padding: 10em;
+}
+.copyright
+{
+  color: var(--text2);
+  justify-content: flex-end;
 }
 @media screen and (max-width: 1415px)
 {
@@ -312,76 +318,109 @@ footer
     justify-content: center;
     align-content: center;
   }
+  .main-footer
+  {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 0.8em;
+  }
 }
 @media screen and (max-width: 1200px)
 {
   /*mid-header realign*/
   .right-desp > div > a {
-  padding: 0 1em 0 1em;
-  font-size: 0.9rem;
-}
-.left-desp > div > a {
-  padding: 0 0.8em 0 0.8em;
-  font-size: 0.92rem; 
-}
+    padding: 0 1em 0 1em;
+    font-size: 0.9rem;
+  }
+  .left-desp > div > a {
+    padding: 0 0.8em 0 0.8em;
+    font-size: 0.92rem; 
+  }
 
 }
 @media screen and (max-width: 1024px)
 {
   /*hide mid-header show only burger and bag icons*/
-.mid-header > .burger{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  width: 32vw;
-  margin-left: 3vw;
-}
-.mid-header > .bag-icon{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-content: center;
-  align-items: center;
-  width: 32vw;
-  margin-right: 3vw;
-}
-.mid-header > .mid-header-logo > img
-{
-  width: 3em;
-  height: 3em;
-}
-.left-desp{
-  display: none;
-}
-.right-desp{
-  display: none;
-}
-.search-bar
-{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 2em;
-  height: 3em;
-  border-bottom: black 1px solid;
-}
-.sub-header
-{
-  height: 4.5em;
-}
+  .mid-header > .burger{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 32vw;
+    margin-left: 3vw;
+  }
+  .mid-header > .bag-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    width: 32vw;
+    margin-right: 3vw;
+  }
+  .mid-header > .mid-header-logo > img
+  {
+    width: 3em;
+    height: 3em;
+  }
+  .left-desp{
+    display: none;
+  }
+  .right-desp{
+    display: none;
+  }
+  .search-bar
+  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2em;
+    height: 3em;
+    border-bottom: black 1px solid;
+  }
+  .sub-header
+  {
+    height: 4.5em;
+  }
 
   /*search bar now is wide with placeholder "What are you looking for"*/
   /*Gallery has now only 3 photos per row and no margin top*/
-.gallery
+  .gallery
+  {
+    margin: 0 2px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(216px, 284px));
+    grid-template-rows: repeat(4, 533px);
+  }
+  /* main footer has change layout */
+  .main-footer
+  {
+    font-size: 1em;
+    height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 300px;
+    grid-template-areas: 
+    "loyalty nope mailing"
+    "followus customservice legal";
+    gap: 20px;
+  }
+.loyalty
 {
-  margin: 0 2px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  grid-template-columns: repeat(3, minmax(216px, 284px));
-  grid-template-rows: repeat(4, 533px);
+  width: 150%;
+  justify-self: start;
+  background-color: white;
+  > p {padding: 0 4em;}
+}
+.mailing
+{
+  width: 150%;
+  justify-self: end;
+  background-color: white;
+  > span {padding: 0 4em;}
+  > form > .email-mailing-in {background-color: var(--light-gray); width: 100%}
 }
 }
 @media screen and (max-width: 767px)
