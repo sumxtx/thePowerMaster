@@ -69,7 +69,7 @@ a {
   align-content: center;
 }
 .right-desp {
-  width: 33vw;
+width: 33vw;
   margin-right: 2vw;
   justify-content: flex-end;
   display: flex;
@@ -122,19 +122,71 @@ main
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(4, 300px);
-  grid-template-rows: repeat(3,600px);
+  grid-template-rows: repeat(3,minmax(310px,600px));
 } 
 .gal-ele
 {
-  background-color: #b6b6b6;
   display: flex;
   flex-direction: column;
 }
-.gal-ele-img
+.gal-ele-a
 {
-  height: 75%;
-  background-color: lightcyan;
+  height: auto;
 }
+.gal-ele-a > img
+{
+  height:auto;
+  max-width:100%;
+}
+.product-info
+{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: repeat(4, 2em);
+  grid-template-areas:
+  "pname btn"
+  "ptype btn"
+  "pcolor btn"
+  "pprice btn";
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 0.9em;
+}
+.product-name
+{
+  grid-area: pname;
+  color: var(--text2);
+}
+.product-type
+{
+  grid-area: ptype;
+}
+.product-color
+{
+  grid-area: pcolor;
+}
+.product-price
+{
+  grid-area: pprice;
+}
+.add-cart-btn
+{
+  grid-area: btn;
+  margin: auto 0 auto auto;
+  display: flex;
+  background-color: #000000;
+  border-radius: 8px;
+  color: #ffffff;
+  height: 30%;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.add-cart-btn:hover{ background-color: #747474;}
 
 .mid-header > .burger{
   display: none;
@@ -147,7 +199,109 @@ main
 {
   display: none;
 }
+.shop-now
+{
+  height: 300px;
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-image: url("footer-bg.jpg");
+  background-position: center;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 
+.shop-now > h5 
+{
+  z-index: 1000;
+  text-transform: uppercase;
+  color: white;
+}
+.shop-now > h4
+{
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: white;
+}
+.shop-now > button 
+{
+  border: none;
+  padding: 1.5em 2em;
+}
+footer
+{
+  background-color: var(--light-gray);
+  z-index: 1;
+}
+.main-footer
+{
+  height: 250px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "loyalty followus customservice legal mailing"
+}
+.main-footer > div
+{
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.main-footer > div > h5 
+{
+  padding: 2em;
+  text-transform: uppercase;
+  color: var(--text2);
+  font-weight: 400;
+}
+.loyalty
+{
+  grid-area: loyalty;
+  justify-content: flex-start;
+}
+.followus
+{
+  grid-area: followus;
+  justify-content: flex-start;
+}
+.customservice
+{
+  grid-area: customservice;
+  justify-content: flex-start;
+}
+.legal
+{
+  grid-area: legal;
+  justify-content: flex-start;
+}
+.mailing
+{
+  grid-area: mailing;
+  justify-content: center;
+}
+.paymets
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.payments > p
+{
+  width: 30em;
+}
+.payments > img
+{
+  width: 40px;
+  height: 22px;
+}
 @media screen and (max-width: 1415px)
 {
   /*gallery start to shrink */
@@ -222,8 +376,11 @@ main
   /*Gallery has now only 3 photos per row and no margin top*/
 .gallery
 {
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 284px);
+  margin: 0 2px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, minmax(216px, 284px));
   grid-template-rows: repeat(4, 533px);
 }
 }
@@ -231,19 +388,17 @@ main
 {
   /*Gallery has now only 2 photos per row and margin top*/
   /*Is the last shrink, mobile version is this one */
+  .gallery
+  {
+    grid-template-columns: repeat(2, minmax(216px, 284px));
+    grid-template-rows: repeat(6, 533px);
+  }
 }
-
-/*
-@media screen and (max-width: 1110px ) {
-  .left-desp{
-    display: none;
+@media screen and (max-width: 375px)
+{
+  .gallery
+  {
+    grid-template-columns: repeat(2, minmax(216px, 284px));
+    grid-template-rows: repeat(6, 533px);
   }
-  .right-desp{
-    display: none;
-  }
-  .burger{
-    display: row;
-  }
-
 }
-*/
