@@ -1,4 +1,6 @@
-/* 1.1 Crea un bucle for que vaya desde 0 a 9 y muestra el valor de i por consola. */
+/*                              Ejercicio 6                               */
+
+// 1.1 Crea un bucle for que vaya desde 0 a 9 y muestra el valor de i por consola.
 for(let i = 0; i <= 9; i++){ console.log(i); }
 
 /* 1.2 Crea un bucle for que vaya desde 0 a 9 y muestra el valor de i por consola solo 

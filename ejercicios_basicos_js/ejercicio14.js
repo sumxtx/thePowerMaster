@@ -35,7 +35,6 @@ function repeatCounter(list)
 console.log(repeatCounter(words));
 
 /*
-//De primeras lo habia hecho con map, hasta descobrir que js hace pseudomaps, con objetos... wtf
 function repeatCounter(list) {
   // Completar
   const mapp = new Map();

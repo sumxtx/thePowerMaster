@@ -5,7 +5,7 @@ con las frutas del array de frutas.
 Recuerda no usar frutas duplicadas.
 Finalmente, imprime el array resultante. */
 
-const fruits = ["Strawberry", "Banana", "Orange", "Apple"];
+const fruits = ["Strawberry", "Banana", "Orange", "Apple", "Pear", "berry", "tomato"];
 
 const foodSchedule = [
   { name: "Heura", isVegan: true },

@@ -1,102 +1,132 @@
-* {
+/* General Stylings ----------------------------------------------------------*/
+*
+{
   margin: 0;
   padding: 0;
   list-style: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-:root {
+
+:root
+{
   --light-gray: #f1f1f1;
   --dark-gray: #747474;
   --text2: #6b6b6b;
 }
-header {
+
+a
+{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header Stylings -----------------------------------------------------------*/
+header
+{
   width: 100vw;
 }
-.loyalty-info {
+
+.loyalty-info
+{
   font-size: 1em;
   text-align: center;
   padding: 0.57em;
   background-color: var(--light-gray);
 }
-h6 {
+
+.loyalty-info > h6 
+{
   font-weight: 550;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
-.mid-header {
+
+.mid-header
+{
   width: 100vw;
   height: 4.4em;
   display: flex;
   flex-direction: row;
 }
-.left-desp {
+
+.left-desp
+{
   width:33vw;
   margin-left: 2vw; 
   justify-content: flex-start;
   display: flex;
   flex-direction: row;
 }
-.left-desp > div {
+
+.left-desp > div
+{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
 }
-.left-desp > div > a {
-  font-weight: normal;
-  justify-content: center;
-  align-items: center;
+
+.left-desp > div > a 
+{
   align-content: center;
   text-transform: uppercase;
   padding: 0 1.5em 0 1.5em;
-  height: 100%;
   font-size: 0.92rem;
 }
-.left-desp > div:hover {
+
+.left-desp > div:hover
+{
   background-color: var(--light-gray);
 }
-.mid-header-logo {
+
+.mid-header-logo
+{
   width:30vw;
   justify-content: center;
   display: flex;
 }
-.mid-header-logo > img {
+
+.mid-header-logo > img
+{
   width: 4.4em;
   height: 4.4em;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-.right-desp {
+
+.right-desp
+{
   width: 33vw;
   margin-right: 2vw;
   justify-content: flex-end;
   display: flex;
   flex-direction: row;
 }
-.right-desp > div {
+
+.right-desp > div
+{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   color: var(--text2);
 }
-.right-desp > div > a {
+
+.right-desp > div > a
+{
   font-weight: normal;
-  justify-content: center;
-  align-items: center;
   align-content: center;
   text-transform: capitalize;
-  padding: 0 1.5em 0 1.5em;
+  padding: 0 1em 0 1em;
   height: 100%;
   font-size: 0.9rem;
 }
-.right-desp > div:hover {
+
+.right-desp > div:hover
+{
   background-color: var(--light-gray);
 }
-.sub-header {
+
+.search-bar
+{
+  display: none;
+}
+
+.sub-header
+{
   top:0;
   position: sticky;
   height: 4em;
@@ -106,15 +136,18 @@ a {
   align-content: center;
   background-color: var(--light-gray);
 }
-.sub-header > h3{
+
+.sub-header > h3
+{
   font-size: 1.5em;
   text-align: center;
   font-weight: normal;
 }
+
 .gallery
 {
   width:100vw;
-  margin: 2em auto 1em auto;
+  margin: 0em auto 0em auto;
   display:grid;
   gap: 2em;
   justify-content: center;
@@ -122,20 +155,39 @@ a {
   grid-template-columns: repeat(4, 300px);
   grid-template-rows: repeat(3,minmax(310px,600px));
 } 
+
 .gal-ele
 {
   display: flex;
   flex-direction: column;
 }
+
+.product-features
+{
+  display: flex;
+  justify-content: flex-end;
+  color: red;
+  position: relative;
+  text-align: right;
+  top: 30px;
+  right: 0px;
+  left: 100px;
+  background-color: white;
+  width: 4em;
+}
+
 .gal-ele-a
 {
   height: auto;
 }
+
 .gal-ele-a > img
 {
   height:auto;
   max-width:100%;
+  z-index: -1;
 }
+
 .product-info
 {
   display: grid;
@@ -191,10 +243,6 @@ a {
   display: none;
 }
 .mid-header > .bag-icon
-{
-  display: none;
-}
-.search-bar
 {
   display: none;
 }
@@ -373,11 +421,17 @@ footer
   .search-bar
   {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: flex-start;
-    margin-left: 2em;
     height: 3em;
     border-bottom: black 1px solid;
+  }
+  .search-bar > input
+  {
+    padding: 1em;
+    border: white 1px solid;
+    width: 100vw;
+    outline: none;
   }
   .sub-header
   {
@@ -437,7 +491,7 @@ footer
 {
   .gallery
   {
-    grid-template-columns: repeat(2, minmax(216px, 284px));
+    grid-template-columns: repeat(2, minmax(1fr, 160px));
     grid-template-rows: repeat(6, 533px);
   }
 }

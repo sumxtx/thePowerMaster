@@ -1,6 +1,8 @@
 /* Ejercicio 12
 
-Valores únicos: Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados.
+Valores únicos: Crea una función que reciba por parámetro un array y 
+compruebe si existen elementos duplicados, 
+en caso que existan los elimina para retornar un array sin los elementos duplicados.
 Pista: puedes generar un nuevo array y devolverlo.
 Puedes usar este array para probar tu función: */
 
@@ -26,32 +28,12 @@ const duplicates = [
 function removeDuplicates(list)
 {
   const nodup = [];
-  for(ele of list)
-  {
-    if(!(nodup.includes(ele)))
-    {
-      nodup.push(ele); 
-    }
+  for(let ele of list) {
+    if(!(nodup.includes(ele))) { nodup.push(ele); }
   }
   return nodup;
 }
 console.log(removeDuplicates(duplicates));
-
-/*
-function removeDuplicates(list)
-{
-  const nodup = [];
-  for(ele of list)
-  {
-    if(!(nodup.includes(ele)))
-    {
-      nodup.push(ele); 
-    }
-  }
-  return nodup;
-}
-console.log(removeDuplicates(duplicates));
-*/
 
 //Other Ways of do it
 
