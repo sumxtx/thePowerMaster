@@ -26,6 +26,7 @@ header
   width: 100vw;
 }
 
+/* Loyalty info banner*/
 .loyalty-info
 {
   font-size: 1em;
@@ -39,6 +40,7 @@ header
   font-weight: 550;
 }
 
+/* Navigation Buttons Header*/
 .mid-header
 {
   width: 100vw;
@@ -120,11 +122,7 @@ header
   background-color: var(--light-gray);
 }
 
-.search-bar
-{
-  display: none;
-}
-
+/* Current Page Products Title */
 .sub-header
 {
   top:0;
@@ -144,6 +142,23 @@ header
   font-weight: normal;
 }
 
+/* Hidden until Response */
+.search-bar
+{
+  display: none;
+}
+
+.mid-header > .burger
+{
+  display: none;
+}
+
+.mid-header > .bag-icon
+{
+  display: none;
+}
+
+/* Main Gallery Stylings -----------------------------------------------------*/
 .gallery
 {
   width:100vw;
@@ -162,20 +177,6 @@ header
   flex-direction: column;
 }
 
-.product-features
-{
-  display: flex;
-  justify-content: flex-end;
-  color: red;
-  position: relative;
-  text-align: right;
-  top: 30px;
-  right: 0px;
-  left: 100px;
-  background-color: white;
-  width: 4em;
-}
-
 .gal-ele-a
 {
   height: auto;
@@ -188,6 +189,7 @@ header
   z-index: -1;
 }
 
+/* Div under the photo */
 .product-info
 {
   display: grid;
@@ -203,23 +205,29 @@ header
   align-content: center;
   font-size: 0.9em;
 }
+
 .product-name
 {
   grid-area: pname;
   color: var(--text2);
 }
+
 .product-type
 {
   grid-area: ptype;
 }
+
 .product-color
 {
   grid-area: pcolor;
 }
+
 .product-price
 {
   grid-area: pprice;
 }
+
+/* Add to cart button */
 .add-cart-btn
 {
   grid-area: btn;
@@ -236,16 +244,29 @@ header
   font-size: 1.1em;
   font-weight: bold;
 }
-.add-cart-btn:hover{
+
+.add-cart-btn:hover
+{
   background-color: var(--dark-gray);
 }
-.mid-header > .burger{
-  display: none;
-}
-.mid-header > .bag-icon
+
+/* Tag over the photo */
+.product-features
 {
-  display: none;
+  color: var(--text2);
+  position: relative;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 0.7em;
+  top: 25px;
+  right: 0px;
+  left: 50%;
+  background-color: white;
+  width: 50%;
 }
+
+/* Footer Stylings -----------------------------------------------------------*/
+/* Shop Now banner */
 .shop-now
 {
   height: 300px;
@@ -261,26 +282,32 @@ header
   align-items: center;
   align-content: center;
 }
+
 .shop-now > h5 
 {
   text-transform: uppercase;
   color: white;
 }
+
 .shop-now > h4
 {
   text-transform: uppercase;
   font-size: 2rem;
   color: white;
 }
+
 .shop-now > button 
 {
   border: none;
   padding: 1em 2em;
 }
+
+/* Footer links */
 footer
 {
   background-color: var(--light-gray);
 }
+
 .main-footer
 {
   height: 250px;
@@ -291,6 +318,7 @@ footer
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas: "loyalty followus customservice legal mailing"
 }
+
 .main-footer > div
 {
   display: flex;
@@ -299,6 +327,7 @@ footer
   align-content: center;
   text-align: center;
 }
+
 .main-footer > div > h5 
 {
   padding: 2em;
@@ -306,39 +335,59 @@ footer
   color: var(--text2);
   font-weight: 400;
 }
+
 .loyalty
 {
   grid-area: loyalty;
 }
+
 .followus
 {
   grid-area: followus;
 }
+
 .customservice
 {
   grid-area: customservice;
 }
+
 .legal
 {
   grid-area: legal;
 }
+
 .mailing
 {
   grid-area: mailing;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 2em;
 }
+
 .email-mailing-in
 {
   border: none;
   height: 1.5rem;
   padding: 1em;
 }
-.paymets-div
+
+/* Payments info section */
+.payments-div
 {
   display: flex;
   width: 100vw;
+  height: 3em;
   flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: white;
+  color: var(--text2);
+  text-transform: uppercase;
 }
+
 .payments-div > img
 {
   width: 40px;
@@ -346,26 +395,36 @@ footer
   justify-content: flex-start;
   align-items: left;
   align-content: left;
+  font-weight: 400;
 }
+
 .payment-title
 {
   padding: 10em;
+  margin-left: 3vw;
 }
-.copyright
-{
-  color: var(--text2);
-  justify-content: flex-end;
-}
+
+/* First Response: gallery start to shrink -----------------------------------*/
 @media screen and (max-width: 1415px)
 {
-  /*gallery start to shrink */
   .gallery
   {
     margin: 2em auto;
     grid-template-columns: repeat(4, 20%);
     justify-content: center;
     align-content: center;
+    row-gap: 0;
   }
+
+  .product-features
+  {
+    position: relative;
+    font-size: 1.3ch;
+    top: 4%;
+    width: 60%;
+    left: 40%;
+  }
+
   .main-footer
   {
     margin-left: 5vw;
@@ -373,6 +432,8 @@ footer
     font-size: 0.8em;
   }
 }
+
+/* Second Response: mid header, product info realign -------------------------*/
 @media screen and (max-width: 1200px)
 {
   /*mid-header realign*/
@@ -384,12 +445,28 @@ footer
     padding: 0 0.8em 0 0.8em;
     font-size: 0.92rem; 
   }
-
+  .product-features
+  {
+    font-size: 1.2ch;
+    position: relative;
+    top: 4%;
+    left: 30%;
+    min-width: 70%;
+  }
 }
+
+/* Third Response: hide and compact mid header, search bar appears 
+ * major layout changes                                               ---------*/
 @media screen and (max-width: 1024px)
 {
-  /*hide mid-header show only burger and bag icons*/
-  .mid-header > .burger{
+  /*hide mid-header and product features  show only burger and bag icons*/
+  .product-features
+  {
+    display: none;
+  }
+
+  .mid-header > .burger
+  {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -398,7 +475,9 @@ footer
     width: 32vw;
     margin-left: 3vw;
   }
-  .mid-header > .bag-icon{
+
+  .mid-header > .bag-icon
+  {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -407,17 +486,25 @@ footer
     width: 32vw;
     margin-right: 3vw;
   }
+
   .mid-header > .mid-header-logo > img
   {
     width: 3em;
     height: 3em;
   }
-  .left-desp{
+
+  /* hide buttons*/
+  .left-desp
+  {
     display: none;
   }
-  .right-desp{
+
+  .right-desp
+  {
     display: none;
   }
+
+  /* Search bar appears */
   .search-bar
   {
     display: flex;
@@ -426,6 +513,7 @@ footer
     height: 3em;
     border-bottom: black 1px solid;
   }
+
   .search-bar > input
   {
     padding: 1em;
@@ -433,26 +521,46 @@ footer
     width: 100vw;
     outline: none;
   }
+
   .sub-header
   {
     height: 4.5em;
   }
 
-  /*search bar now is wide with placeholder "What are you looking for"*/
   /*Gallery has now only 3 photos per row and no margin top*/
   .gallery
   {
-    margin: 0 2px;
+    margin: 0 auto;
     justify-content: center;
     align-content: center;
-    align-items: center;
+    align-items: start;
     grid-template-columns: repeat(3, minmax(216px, 284px));
     grid-template-rows: repeat(4, 533px);
+    gap: 0;
   }
+
+  .gal-ele
+  {
+    max-width: 90%;
+    margin: 0 auto;
+    column-gap:1em;
+  }
+
+  .gal-ele-a
+  {
+    height: auto;
+    max-width:100%;
+  }
+
+  .gal-ele-a > img
+  {
+    height:auto;
+    max-width:100%;
+  }
+
   /* main footer has change layout */
   .main-footer
   {
-    font-size: 1em;
     height: 500px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 200px 300px;
@@ -461,37 +569,122 @@ footer
     "followus customservice legal";
     gap: 20px;
   }
-.loyalty
-{
-  width: 150%;
-  justify-self: start;
-  background-color: white;
-  > p {padding: 0 4em;}
+
+  .loyalty
+  {
+    width: 150%;
+    justify-self: start;
+    background-color: white;
+    > p {padding: 0 4em;}
+  }
+  .mailing
+  {
+    width: 130%;
+    justify-self: end;
+    background-color: white;
+    > span {
+      padding: 0 4em;
+    }
+  }
+  .email-mailing-in {
+    background-color: var(--light-gray);
+    width: 100%
+  }
 }
-.mailing
-{
-  width: 150%;
-  justify-self: end;
-  background-color: white;
-  > span {padding: 0 4em;}
-  > form > .email-mailing-in {background-color: var(--light-gray); width: 100%}
-}
-}
+
+/* Fourth response: gallery change layout to 2 columns, footer to 1 column ---*/
 @media screen and (max-width: 767px)
 {
   /*Gallery has now only 2 photos per row and margin top*/
-  /*Is the last shrink, mobile version is this one */
   .gallery
   {
-    grid-template-columns: repeat(2, minmax(216px, 284px));
-    grid-template-rows: repeat(6, 533px);
+    grid-template-columns: repeat(2, minmax(216px, 350px));
+    grid-template-rows: repeat(6, 600px);
+    margin: 0;
+    row-gap: 3em;
+  }
+  .gal-ele
+  {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .product-info
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 0.9em;
+    }
+  .add-cart-btn
+  {
+    color: white;
+    height: 45px;
+    width: 30%;
+  }
+  .gal-ele-a > img
+  {
+    height:auto;
+    max-width:100%;
+  }
+
+  .main-footer
+  {
+    margin: 0 1vw 0 1vw;
+    display: grid;
+    height: 500px;
+    grid-template-columns: 700px;
+    grid-template-rows: 4fr;
+    grid-template-areas: 
+    "loyalty"
+    "mailing"
+    "payments"
+    "followus"
+  }
+  .loyalty
+  {
+    grid-area: loyalty;
+    margin: 0;
+    justify-content: center;
+    height: 100px;
+    max-width: 100%;
+  }
+  .mailing
+  {
+    grid-area: mailing;
+    padding: 0;
+    height: 200px;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0;
+  }
+  .payments-div
+  {
+    grid-area: payments;
+  }
+  .followus
+  {
+    grid-area: followus;
+  }
+  .customservice
+  {
+    display: none;
   }
 }
-@media screen and (max-width: 375px)
+@media screen and (max-width: 450px)
 {
+  main
+  {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   .gallery
   {
-    grid-template-columns: repeat(2, minmax(1fr, 160px));
+    grid-template-columns: repeat(2, 162px));
     grid-template-rows: repeat(6, 533px);
+    gap: 0.5em;
   }
 }

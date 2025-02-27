@@ -22,15 +22,14 @@ const capitals = {
 function getCapital(list, country) {
   // insert code
   const ret = {};
-  console.log(list.country);
   if(list[country])
   {
-    ret[country] = (list.country);
+    ret[country] = (list[country]);
     return ret;
   }
   return("Country not in list");
 }
 
-console.log(getCapital(capitals, "Spain"));
+console.log(getCapital(capitals, "Afrika"));
 
 
