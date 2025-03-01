@@ -692,7 +692,7 @@ footer
 {
   .gallery
   {
-    grid-template-columns: repeat(2, 162px));
+    grid-template-columns: repeat(2, 47%));
     grid-template-rows: repeat(6, 533px);
   }
 }
