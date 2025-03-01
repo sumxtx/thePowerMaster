@@ -29,7 +29,9 @@ function removeDuplicates(list)
 {
   const nodup = [];
   for(let ele of list) {
-    if(!(nodup.includes(ele))) { nodup.push(ele); }
+    if(!(nodup.includes(ele))) {
+      nodup.push(ele);
+    }
   }
   return nodup;
 }
@@ -37,7 +39,6 @@ console.log(removeDuplicates(duplicates));
 
 //Other Ways of do it
 
-/* Elegansia pura */
 /*
 function removeDuplicates(list) {
   return([...new Set(list)]);
@@ -52,7 +53,6 @@ function removeDuplicates(list) {
 console.log(removeDuplicates(duplicates));
 */
 
-/* lo mismo que mi solucion pero mood "no quiero que el junior entienda el ooga booga para hacerme imprescindible en la chamba" */
 /*
 function removeDuplicates(list) { 
   return list.reduce((nodup, item) =>  {

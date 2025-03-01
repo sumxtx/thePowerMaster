@@ -6,41 +6,30 @@ Puedes usar este array: */
 
 const placesToTravel = [
   {id: 5, name: 'Japan'},
+  {id: 5, name: 'Japan'},
   {id: 11, name: 'Venecia'},
+  {id: 11, name: 'Veneca'},
   {id: 11, name: 'Veneca'},
   {id: 23, name: 'Murcia'},
   {id: 40, name: 'Santander'},
+  {id: 5, name: 'Japan'},
   {id: 44, name: 'Filipinas'},
   {id: 59, name: 'Madagascar'}];
 
-for(let i = 0; i < placesToTravel.length; i++)
-{
-  if(placesToTravel[i].id === 11 || placesToTravel[i].id === 40)
-  {
-    placesToTravel.splice(i, 1);
-    i--;
-  }
-}
-console.log(placesToTravel);
+const ids = [11,40,59];
 
-/*
-function removeById(listToPurge, idSet)
+function removeIds(array, ids)
 {
-  for (ele of listToPurge)
+  for(let i = 0; i < array.length; i++)
   {
-    if(idSet.includes(ele.id))
+    if(ids.includes(array[i].id))
     {
-      listToPurge.splice(listToPurge.indexOf(ele), 1);
+      array.splice(i, 1);
       i--;
     }
   }
-  console.log(listToPurge);
-  return listToPurge;
+  console.log(array);
+  return array;
 }
 
-console.log(placesToTravel);
-const idsToRemove = [44, 55, 11, 23, 25];
-console.log(`ids To remove ${idsToRemove}`);
-removeById(placesToTravel, idsToRemove);
-//console.log(removeById(placesToTravel, idsToRemove));
-*/
+removeIds(placesToTravel, ids);

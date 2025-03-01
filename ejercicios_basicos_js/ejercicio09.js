@@ -13,7 +13,7 @@ const numbers2 = [3,3,3,3];
 function sumNumbers(numberList) {
   // Completar código
   let ret = 0;
-  for(n of numberList) { ret += n; }
+  for(let n of numberList) { ret += n; }
   return(ret);
 }
 

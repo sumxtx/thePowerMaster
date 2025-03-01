@@ -25,4 +25,3 @@ for(ele of users)
     console.log(`Usuarios mayores de edad: ${ele.name}`);
   }
 }
-

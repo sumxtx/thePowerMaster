@@ -10,15 +10,25 @@ Puedes usar este array para probar tu función: */
 
 const words = [
   'code',
-  'repeat',
   'eat',
   'sleep',
+  'repeat',
   'code',
   'enjoy',
   'sleep',
+  'repeat',
   'code',
   'enjoy',
   'sleep',
+  'repeat',
+  'code',
+  'enjoy',
+  'code',
+  'bug',
+  'noenjoy',
+  'enjoy',
+  'code',
+  'enjoy',
   'code'
 ];
 

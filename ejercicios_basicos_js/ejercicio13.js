@@ -32,3 +32,4 @@ function nameFinder(nameList, toCheck) {
   return(false);
 }
 console.log(nameFinder(names, 'Marc'));
+console.log(nameFinder(names, 'Mar'));

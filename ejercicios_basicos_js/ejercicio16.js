@@ -5,7 +5,7 @@ Imprime en un console.log cada uno de sus valores. */
 
 const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar'];
 
-for(ele of placesToTravel)
+for(let ele of placesToTravel)
 {
   console.log(ele);
 }

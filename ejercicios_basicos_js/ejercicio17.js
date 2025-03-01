@@ -11,7 +11,12 @@ const alien = {
     weight: 180
 };
 
-for (ele in alien)
+function logElement(obje)
 {
-  console.log(`La propriedad ${ele} tiene como valor ${alien[ele]}`)
+  for(let ele in obje)
+  {
+    console.log(`La propriedad ${ele} tiene como valor ${obje[ele]}`)
+  }
 }
+
+logElement(alien);

@@ -19,15 +19,15 @@ const toys = [
 
 function removeByWord(list, word)
 {
-  for(let i = 0; i < list.length; i++)
+  const ret = [];
+  for(let ele of list)
   {
-    if((list[i].name).includes(word))
+    if(!((ele.name).includes(word)))
     {
-      list.splice(i,1);
-      i--;
+      ret.push(ele);
     }
   }
-  return list;
+  return ret;
 }
 
 console.log(removeByWord(toys, "gato"));
