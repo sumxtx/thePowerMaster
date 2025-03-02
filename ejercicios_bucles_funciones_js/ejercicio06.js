@@ -26,7 +26,6 @@ function getDecade(year)
   decade = year % 100;
   (decade = Math.trunc(decade /= 10));
   (decade *= 10);
-  console.log(decade);
   return decade;
 }
 
@@ -37,15 +36,14 @@ function sortMoviesByDecade(list)
   for(ele of list)
   {
     decade = getDecade(ele.releaseYear);
-    console.log(`${ele.title} decade: ${decade}}`);
     if (!sortedList[decade])
     {
       sortedList[decade] = [];
-      sortedList[decade].push(ele);
+      sortedList[decade].push(ele.title);
     }
     else if(sortedList[decade])
     { 
-      sortedList[decade].push(ele);
+      sortedList[decade].push(ele.title);
     }
   }
   return sortedList;
