@@ -52,6 +52,11 @@ De nuevo haz varios ejemplos para practicar y comprueba que funcionan correctame
 
 function removeItems(array, iToRemove)
 {
+  if(iToRemove.length === 0)
+  {
+    console.log(`No idexes Found to remove`);
+    return -1;
+  }
   const toRemover = [];
   for(let ele of iToRemove)
   {

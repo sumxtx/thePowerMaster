@@ -8,8 +8,7 @@ Busca información sobre la función de JavaScript Math.random() */
 
 function rollDice(diceFaces)
 {
-  let ran = Math.floor(Math.random() * diceFaces);
-  return ran
+  return(~~(Math.random() * diceFaces));
 }
 
 console.log(rollDice(6));
